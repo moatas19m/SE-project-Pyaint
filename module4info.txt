@@ -1,0 +1,20 @@
+November 1, 2022, 3:05pm
+
+According to what Sir UAK just said, we will lose marks if our design does not match what 
+we will code later on. Therefore this documentation is a way to keep track of our functionality and 
+its flow.
+
+Based on the activity diagram for UNDO/REDO that Sheheryar made, we have two stacks for this function,
+one is the Activity stack, the other is the Redo stack. In reality, while coding, we will use 
+a python list for both of these stacks. 
+Hazrat Google says: "Python's built-in data structure list can be used as a stack. 
+Instead of push(), append() is used to add elements to the top of the stack while 
+pop() removes the element in LIFO order."
+
+For the linked list that we will need to use for the History/Animation part, we will use 
+a list containing instances of the Pygame Rect object (need to figure this out). When 'Animate'
+button is clicked it will iterate through this list and call the pygame.draw.rect function 
+for each index the list.
+
+The history part is simple, a simple list containing strings describing each action performed in 
+sequence for eg: (draw line, change colour to red, draw circle, draw rectangle, undo, undo, redo, draw line) etc.
